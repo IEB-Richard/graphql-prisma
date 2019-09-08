@@ -15,7 +15,6 @@ services:
             connector: postgres
             host: ec2-54-227-251-33.compute-1.amazonaws.com
             database: d1797jdqmsg22s
-            schema: public
             user: sdzfkamdagqsln
             password: 03fa6ca8ba6cf6c12b235df1eab0fc5bf47ef0c8c4ecd1a1effee06d6d090365
             ssl: true
