@@ -27,15 +27,20 @@ const Mutation = {
 			}
 		}, info)
 	},
-	deletePost(parent, args, { prisma }, info) {
+	async deletePost(parent, args, { prisma }, info) {
 		return prisma.mutation.deletePost({
 			where: {
 				id: args.id
 			}
 		}, info)
 	},
-	updatePost(parent, args, { db, pubsub }, info) {
-
+  updatePost(parent, args, { prisma }, info) {
+		return prisma.mutation.updatePost({
+			where: {
+				id: args.id
+			},
+			data: args.data
+		}, info)
 	},
 	createComment(parent, args, { db, pubsub }, info) {
 		const userExists = db.users.some((user) => user.id === args.data.author);
