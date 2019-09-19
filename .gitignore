@@ -2,6 +2,10 @@
 logs
 *.log
 
+# Not for Production 
+config/
+dist/
+
 # Runtime data
 pids
 *.pid
